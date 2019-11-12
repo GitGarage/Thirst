@@ -25,9 +25,10 @@ setDelay.onclick = function() {
         "delay": delaySeconds.value
     };
     chrome.storage.sync.set(delay, function() {
+        if (active)
         chrome.tabs.executeScript(
             tab, {
-                code: script.join(active ? delaySeconds.value : 0)
+                code: script.join(delaySeconds.value)
             });
         window.close();
     });
@@ -46,6 +47,7 @@ $('#active').change(function() {
         "active": active
     };
     chrome.storage.sync.set(datas, function() {
+        if (active)
         chrome.tabs.executeScript(
             tab, {
                 code: script.join(active ? delaySeconds.value : 0)

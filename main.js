@@ -1,5 +1,6 @@
-chrome.storage.sync.get('delay', function(data) {
-    chrome.storage.sync.get('active', function(active) {
+chrome.storage.sync.get('active', function(active) {
+    if (active.active)
+    chrome.storage.sync.get('delay', function(data) {
         var submitButtons = document.querySelectorAll("[type=submit]:enabled");
         var onClicks = [];
         var submitTimers = [];

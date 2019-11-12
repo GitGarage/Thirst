@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-toggle.min.css" rel="stylesheet">
     <style>
-      input {
-        width: 80px;
-      }
-      button {
-        outline: none;
-      }
+      .sameWidth { width: 175px; }
+      body { background-color: #ccf }
     </style>
   </head>
   <body>
-    <input type="number" id="delaySeconds"></input>
-    <button id="setDelay" type="button">Delay (seconds)</button>
+    <input class="form-control sameWidth mt-1 mx-1" type="number" id="delaySeconds"></input>
+    <button class="btn btn-info sameWidth mx-1" id="setDelay" type="button">Set Delay (seconds)</button>
+    <div class="m-1">
+      <input id="active" data-width="175" type="checkbox" checked data-toggle="toggle" data-on="Active" data-off="Inactive">
+    </div>
+    <script src="bootstrap/js/jquery.min.js"></script></body>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap-toggle.min.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

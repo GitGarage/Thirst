@@ -1,11 +1,10 @@
 {
     "name": "Thirst",
-    "version": "2.2",
+    "version": "2.3",
     "description": "Quench your Thirst... or at least hide it. Thirst forces you to wait before sending that fateful message.",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
     "background": {
-        "scripts": ["background.js"],
-        "persistent": true
+        "scripts": ["background.js"]
     },
     "icons": {
         "128": "icon128.png"

@@ -47,7 +47,6 @@ $('#active').change(function() {
         "active": active
     };
     chrome.storage.sync.set(datas, function() {
-        if (active)
         chrome.tabs.executeScript(
             tab, {
                 code: script.join(active ? delaySeconds.value : 0)

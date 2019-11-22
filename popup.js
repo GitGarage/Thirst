@@ -28,7 +28,7 @@ setDelay.onclick = function() {
         if (active)
         chrome.tabs.executeScript(
             tab, {
-                code: script.join(delaySeconds.value)
+                code: script.join(delaySeconds.value || 60)
             });
         window.close();
     });

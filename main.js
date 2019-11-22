@@ -35,7 +35,7 @@ chrome.storage.sync.get('active', function(active) {
                     element.removeAttribute("countingDown");
                 } else {
                     element.setAttribute("countingDown", true);
-                    element.innerHTML = active.active ? data.delay : 0;
+                    element.innerHTML = active.active ? data.delay || 60 : 0;
                     if (element.innerHTML < 1) {
                         clearInterval(submitTimers[thisTimer]);
                         element.nextSibling.click();

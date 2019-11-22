@@ -1,8 +1,8 @@
 {
     "name": "Thirst",
-    "version": "2.3",
+    "version": "3.1",
     "description": "Quench your Thirst... or at least hide it. Thirst forces you to wait before sending that fateful message.",
-    "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
+    "permissions": ["activeTab", "declarativeContent", "storage", "*://*.reddit.com/*", "*://*.facebook.com/*"],
     "background": {
         "scripts": ["background.js"]
     },
